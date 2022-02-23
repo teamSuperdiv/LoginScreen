@@ -1,0 +1,66 @@
+:root, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-screen {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.left {
+    position: relative;
+    width: 30%;
+    min-width: 300px;
+    background: url(./img/steven-cordes-S_rO8oOw-EU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.left > .logo {
+    position: relative;
+    top: 20%;
+    height: 120px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#img-caption {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: white;
+    font-size: small;
+}
+
+.right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightsteelblue;
+}
+
+.right > .container {
+    width: 100%;
+}
+
+.form-main {
+    background-color: white;
+    padding: 20px;
+}
+
+.form-main > form {
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.form-main .form-label {
+    display: block;
+    font-size: small;
+    
+}
