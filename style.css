@@ -13,8 +13,7 @@
 
 .left {
     position: relative;
-    width: 40%;
-    min-width: 300px;
+    width: max(40%, 500px);
     background: url(./img/steven-cordes-S_rO8oOw-EU-unsplash.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -69,9 +68,11 @@
 }
 
 .form-main > form {
-    display: flex;
-    gap: 20px 32px;
-    flex-flow: row wrap;
+    display: grid;
+    gap: 30px 40px;
+    grid-template-columns: 250px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
 }
 
 .form-main .form-label {
@@ -107,10 +108,9 @@
     margin-bottom: 1rem;
 }
 
-
-/* Should only look good on tablet and desktop */
-@media screen and (min-width: 1025px) {
-    .form-main > form { 
-        width: 60%;
+@media screen and (min-width: 1024px) {
+    .form-main > form {
+        grid-template-columns: 250px 250px;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 }
