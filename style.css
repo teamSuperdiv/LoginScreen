@@ -24,8 +24,17 @@
     position: relative;
     top: 20%;
     height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logo > h1 {
+    font-size: 3rem;
+    color: white;
+    margin-left: 1rem;
 }
 
 #img-caption {
