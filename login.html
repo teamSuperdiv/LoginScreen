@@ -21,50 +21,54 @@
                 <div class="alert-box">
                     <div class="alert">
                         <h3>This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            <br> Necessitatibus, commodi! Sign up now to get started.</h3>
+                            <br> Necessitatibus, commodi! Sign up now to get started.
+                        </h3>
                         <h3>You know you want to.</h3>
                     </div>
                 </div>
-                <div class="form-main">
+                <form novalidate action="/" method="GET" id="form">
                     <h3>Let's do this!</h3>
-                    <form action="#">
+                    <div class="form-main">
                         <div>
-                            <label class="form-label" for="">First Name</label>
-                            <input type="text">
+                            <label class="form-label" for="firstName">First Name*</label>
+                            <input type="text" name="firstName" id="firstName" required tabindex="1">
+                            <div class="error" hidden>Please enter your first name!</div>
                         </div>
                         <div>
-                            <label class="form-label" for="">Last Name</label>
-                            <input type="text">
-                        </div>
-
-                        <div>
-                            <label class="form-label" for="">Email</label>
-                            <input type="email">
+                            <label class="form-label" for="lastName">Last Name*</label>
+                            <input type="text" name="lastName" id="lastName" required tabindex="2">
+                            <div class="error" hidden>Please enter your last name!</div>
                         </div>
                         <div>
-                            <label class="form-label" for="">Phone Number</label>
-                            <input type="tel">
-                        </div>
-
-                        <div>
-                            <label class="form-label" for="">Password</label>
-                            <input type="password">
+                            <label class="form-label" for="email">Email*</label>
+                            <input type="email" name="email" id="email" required tabindex="3">
+                            <div class="error" hidden>Your email address is required!</div>
                         </div>
                         <div>
-                            <label class="form-label" for="">Password Confirm</label>
-                            <input type="password">
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" tabindex="4">
+                            <div class="error" hidden></div>
                         </div>
-
-                    </form>
-                </div>
-                <div class="form-footer">
-                    <button class="create-acc">Create Account</button>
-                    <p>Already have an account? <a href=""><b>Log in</b></a></p>
-                </div>
+                        <div>
+                            <label class="form-label" for="pw">Password*</label>
+                            <input type="password" name="password" id="pw" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$" required tabindex="5">
+                            <div class="error" hidden>Please enter a correct password!</div>
+                        </div>
+                        <div>
+                            <label class="form-label" for="pw-confirm">Password Confirm*</label>
+                            <input type="password" name="password_confirm" id="pw-confirm" required tabindex="6">
+                            <div class="error" hidden>Your passwords don't match!</div>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <button class="create-acc" type="submit" tabindex="7">Create Account</button>
+                        <p>Already have an account? <a href=""><b>Log in</b></a></p>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
-
+    <script src="./form_validation.js"></script>
 </body>
 
 </html>
